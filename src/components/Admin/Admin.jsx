@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+//page is a work in progress 
 class Admin extends Component {
 
     state = {
         admin: []
     }
 
+    // tells the page to go grab the info for the table on render of the page
     componentDidMount() {
         this.getAdmin();
     }
 
-    getAdmin = () => {
+    //gets the info from the data base 
+        getAdmin = () => {
         axios.get('/feedback')
             .then((response) => {
                 console.log(response.data);
