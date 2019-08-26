@@ -19,6 +19,7 @@ class FeelingToday extends Component {
         })
     }
 
+    //takes in feedback and dispatches it to redux
     handleChange = () => {
         if (this.state.feeling < 1 ) {
             alert('needs to be between 1-5 ')
