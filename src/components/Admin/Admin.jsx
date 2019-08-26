@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Button from '@material-ui/core/Button';
 
 //page is a work in progress 
 class Admin extends Component {
@@ -33,8 +34,8 @@ class Admin extends Component {
                 <td>{feedback.understanding}</td>
                 <td>{feedback.support}</td>
                 <td>{feedback.comments}</td>
-                <td><button>Flag</button></td>
-                <td><button>Delete</button></td></tr>)
+                <td><Button>Flag</Button></td>
+                <td><Button color="secondary">Delete</Button></td></tr>)
             
         })
 
