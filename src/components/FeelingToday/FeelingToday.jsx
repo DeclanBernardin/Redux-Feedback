@@ -8,10 +8,12 @@ class FeelingToday extends Component {
         feeling : 0
     }
 
+    //brings you back a page
     handleBack = () => {
         this.props.history.push('/')
     }
 
+    //changes the current state
     handleChangeState = (event) => {
         this.setState({
                 ...this.state,
