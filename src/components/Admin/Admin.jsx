@@ -28,6 +28,14 @@ class Admin extends Component {
     }
 
     render() {
+       let feedbackTable = this.state.admin.map((feedback)=> {
+            return(<td>{feedback.feeling}</td>,
+                <td>{feedback.understanding}</td>,
+                <td>{feedback.support}</td>,
+                <td>{feedback.comments}</td>)
+            
+        })
+
         return (
             <div className="App">
                 <header className="App-header">
@@ -48,10 +56,7 @@ class Admin extends Component {
                         </thead>
                         <tbody>
                             <tr>
-                                <td>{this.state.admin.feeling}</td>
-                                <td>{this.state.admin.understanding}</td>
-                                <td>{this.state.admin.support}</td>
-                                <td>{this.state.admin.comments}</td>
+                                {feedbackTable}
                                 <td><button>Flag</button></td>
                                 <td><button>Delete</button></td>
                             </tr>
