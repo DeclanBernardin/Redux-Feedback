@@ -12,10 +12,12 @@ class ReviewFeedback extends Component {
         comments: this.props.reduxStore.commentReducer.comments
     }
 
+    //brings you back a page
     handleBack = () => {
         this.props.history.push('/comments')
     }
 
+    //takes all the feedback and sends it to the database
     handleChange = () => {
         axios.post('/feedback', this.state )
         .then((response) => {

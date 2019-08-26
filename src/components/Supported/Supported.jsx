@@ -8,10 +8,12 @@ class Supported extends Component {
         supported : 0
     }
 
+    //brings you back a page
     handleBack = () => {
         this.props.history.push('/understanding')
     }
 
+     //changes the current state
     handleChangeState = (event) => {
         this.setState({
                 ...this.state,
@@ -19,6 +21,7 @@ class Supported extends Component {
         })
     }
 
+    //takes in feedback and dispatches it to redux
     handleChange = () => {
         if (this.state.supported < 1) {
             alert('needs to be between 1-5 ')

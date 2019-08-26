@@ -8,10 +8,12 @@ class Comments extends Component {
         comments: ''
     }
 
+    //brings you back a page
     handleBack = () => {
         this.props.history.push('/supported')
     }
 
+     //changes the current state
     handleChangeState = (event) => {
         this.setState({
                 ...this.state,
@@ -19,6 +21,7 @@ class Comments extends Component {
         })
     }
 
+    //takes in feedback and dispatches it to redux
     handleAdd = () => {
         if (this.state.comments === ''){
             alert('need to comment ')

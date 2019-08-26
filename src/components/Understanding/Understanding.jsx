@@ -8,10 +8,12 @@ class Understanding extends Component {
         understanding : 0
     }
 
+    //brings you back a page
     handleBack = () => {
         this.props.history.push('/feeling')
     }
 
+     //changes the current state
     handleChangeState = (event) => {
         this.setState({
                 ...this.state,
@@ -19,6 +21,7 @@ class Understanding extends Component {
         })
     }
 
+    //takes in feedback and dispatches it to redux
     handleChange = () => {
         if (this.state.understanding < 1) {
             alert('needs to be between 1-5 ')
